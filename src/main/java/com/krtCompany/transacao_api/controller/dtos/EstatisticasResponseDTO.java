@@ -5,5 +5,4 @@ public record EstatisticasResponseDTO(Long count,
                                       Double avg,
                                       Double min,
                                       Double max) {
-
 }
