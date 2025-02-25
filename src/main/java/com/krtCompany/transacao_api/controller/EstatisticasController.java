@@ -18,7 +18,7 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/estatistica")
 @RequiredArgsConstructor
 public class EstatisticasController {
-    private final EstatisticasService estatisticasService;
+    private final EstatisticasService estatisticasService = null;
 
     @GetMapping
     @Operation(description = "Endpoint responsável por buscar estatísticas transações.")

@@ -15,7 +15,8 @@ import com.krtCompany.transacao_api.controller.dtos.TransacaoRequestDTO;
 @Service
 @RequiredArgsConstructor
 public class EstatisticasService {
-    public final TransacaoService transacaoService;
+
+    public final TransacaoService transacaoService = null;
 
     public EstatisticasResponseDTO calcularEstatisticasTransacoes(Integer interaloBusca) {
 
