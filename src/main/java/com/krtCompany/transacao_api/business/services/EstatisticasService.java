@@ -20,6 +20,8 @@ public class EstatisticasService {
 
     public EstatisticasResponseDTO calcularEstatisticasTransacoes(Integer interaloBusca) {
 
+        long start = System.currentTimeMillis();
+
         List<TransacaoRequestDTO> transacoes = transacaoService.buscarTransacoes(interaloBusca);
 
         if(transacoes.isEmpty()) {
@@ -28,6 +30,11 @@ public class EstatisticasService {
 
         DoubleSummaryStatistics estatisticasTransacoes = transacoes.stream().
                 mapToDouble(TransacaoRequestDTO::valor).summaryStatistics();
+
+        long finish = System.currentTimeMillis();
+        long tempoReq = start - finish;
+
+        System.out.println("Tempo de requisição: " + tempoReq + " ms.");
 
         return new EstatisticasResponseDTO(estatisticasTransacoes.getCount(), 
                                            estatisticasTransacoes.getSum(), 
