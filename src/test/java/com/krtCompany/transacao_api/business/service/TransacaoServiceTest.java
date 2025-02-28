@@ -4,7 +4,6 @@ import com.krtCompany.transacao_api.business.services.TransacaoService;
 import com.krtCompany.transacao_api.controller.dtos.EstatisticasResponseDTO;
 import com.krtCompany.transacao_api.controller.dtos.TransacaoRequestDTO;
 import com.krtCompany.transacao_api.infrastructure.exceptions.UnprocessableEntity;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -12,14 +11,12 @@ import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.OffsetDateTime;
-import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class TransacaoServiceTeste {
+public class TransacaoServiceTest {
 
     @InjectMocks
     TransacaoService transacaoService;
